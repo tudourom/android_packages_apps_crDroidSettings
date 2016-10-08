@@ -33,4 +33,9 @@
             android:title="@string/headset_connect_player_title"
             android:summary="@string/headset_connect_player_summary"
             android:defaultValue="false" />
+
+	<PreferenceScreen
+                android:key="transparency_settings"
+                android:title="@string/transparency_title"
+		android:fragment="com.crdroid.settings.fragments.Transparency" />
 </PreferenceScreen>
