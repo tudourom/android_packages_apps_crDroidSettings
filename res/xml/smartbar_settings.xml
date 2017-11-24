@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016 The DirtyUnicorns Project
+     Copyright (C) 2017 The DirtyUnicorns Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -78,4 +78,13 @@
         android:title="@string/one_handed_mode_title"
         android:summary="@string/one_handed_mode_summary"
         android:defaultValue="false" />
+
+    <com.crdroid.settings.preferences.CustomSeekBarPreference
+        android:key="smartbar_custom_icon_size"
+        android:title="@string/smartbar_custom_icon_size_title"
+        android:max="100"
+        settings:min="10"
+        settings:units="%"
+        android:persistent="false" />
+
 </PreferenceScreen>

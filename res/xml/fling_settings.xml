@@ -19,14 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/fling_interface" >
 
-    <Preference
-        style="?android:preferenceInformationStyle"
-        android:key="eos_fling_back_home_policy"
-        android:selectable="false"
-        android:summary="@string/fling_back_home_policy"
-        android:title="@string/info_pref_note_title" />
-
-     <PreferenceCategory
+    <PreferenceCategory
         android:key="eos_actions_swipe_category"
         android:title="@string/fling_swipe_actions" >
 
@@ -65,18 +58,11 @@
             android:title="@string/fling_left_up_swipe"
             android:summary="@string/fling_def_summary" >
         </com.crdroid.settings.preferences.ActionPreference>
-     </PreferenceCategory>
+    </PreferenceCategory>
 
-     <PreferenceCategory
+    <PreferenceCategory
         android:key="eos_actions_tap_category"
         android:title="@string/fling_tap_actions" >
-
-        <Preference
-            style="?android:preferenceInformationStyle"
-            android:key="eos_fling_split_bar_policy"
-            android:selectable="false"
-            android:summary="@string/fling_split_bar_policy"
-            android:title="@string/info_pref_note_title" />
 
         <com.crdroid.settings.preferences.ActionPreference
             android:key="single_right_tap"
@@ -102,6 +88,11 @@
             android:summary="@string/fling_def_summary" >
         </com.crdroid.settings.preferences.ActionPreference>
 
+        <SwitchPreference
+            android:key="fling_keyboard_cursors"
+            android:title="@string/fling_keyboard_cursors_title"
+            android:summary="@string/fling_keyboard_cursors_summary" />
+
         <com.crdroid.settings.preferences.ActionPreference
             android:key="long_right_press"
             android:title="@string/fling_long_press"
@@ -123,7 +114,7 @@
             android:key="eos_fling_show_logo"
             android:title="@string/fling_show_logo_title" />
 
-         <SwitchPreference
+        <SwitchPreference
             android:key="eos_fling_animate_logo"
             android:dependency="eos_fling_show_logo"
             android:title="@string/fling_animate_logo_title"
@@ -131,15 +122,27 @@
 
         <Preference
             android:key="fling_custom_logo_pick"
+            android:dependency="eos_fling_show_logo"
             android:title="@string/fling_logo_custom_logo_pick_title" />
 
         <Preference
             android:key="fling_custom_logo_gallery_pick"
+            android:dependency="eos_fling_show_logo"
             android:title="@string/fling_logo_custom_logo_image_pick_title" />
 
         <Preference
             android:key="fling_custom_logo_reset"
+            android:dependency="eos_fling_show_logo"
             android:title="@string/fling_logo_custom_logo_reset_title" />
+
+        <com.crdroid.settings.preferences.CustomSeekBarPreference
+            android:key="fling_logo_opacity"
+            android:dependency="eos_fling_show_logo"
+            android:title="@string/fling_logo_opacity_title"
+            android:max="255"
+            settings:min="0"
+            settings:units=""
+            android:persistent="false" />
 
         <SwitchPreference
             android:key="eos_fling_show_ripple"
@@ -172,7 +175,7 @@
             settings:units="dp"
             android:dependency="eos_fling_trails_enable"
             android:persistent="false" />
-     </PreferenceCategory>
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="eos_long_swipe_category"
@@ -181,9 +184,9 @@
         <com.crdroid.settings.preferences.SeekBarPreference
             android:key="du_fling_longpress_pref"
             android:title="@string/fling_longpress_title"
-            android:max="2500"
-            settings:min="200"
-            settings:interval="100"
+            android:max="350"
+            settings:min="125"
+            settings:interval="5"
             settings:units="ms"/>
 
         <Preference

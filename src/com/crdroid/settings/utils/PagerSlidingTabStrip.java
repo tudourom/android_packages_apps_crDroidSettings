@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.crdroid.settings;
+package com.crdroid.settings.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -43,7 +43,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.crdroid.settings.R;
+import com.android.settings.R;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 

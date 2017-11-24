@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2012-2014 The TeamEos Project
-               (C) 2016-2017 crDroid Android Project
+               (C) 2017 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,13 +18,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/pulse_settings" >
-
-        <Preference
-            style="?android:preferenceInformationStyle"
-            android:key="pulse_help_policy_notice"
-            android:selectable="false"
-            android:summary="@string/pulse_help_policy_notice_summary"
-            android:title="@string/pulse_help_policy_notice_title" />
 
         <SwitchPreference
             android:key="eos_fling_show_pulse"
@@ -61,6 +53,7 @@
         <PreferenceCategory
             android:key="pulse_fading_bars_category"
             android:title="@string/pulse_legacy_mode_advanced_category">
+
             <com.crdroid.settings.preferences.SeekBarPreference
                 android:key="pulse_custom_dimen"
                 android:title="@string/pulse_custom_dimen"
@@ -158,4 +151,5 @@
                 settings:units="ms"
                 android:dependency="pulse_2"/>
         </PreferenceCategory>
+
 </PreferenceScreen>
